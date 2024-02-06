@@ -1,26 +1,22 @@
-.container {
+.launchpad-container {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
-  background-color: #bacad9;
+  background-color: #f0f0f0;
   overflow-x: auto;
   padding: 10px;
 }
 
-.card {
+.launchpad-card {
   width: calc(33.33% - 10px);
   margin-right: 10px;
   margin-bottom: 10px;
   background-color: #fff;
   border-radius: 10px;
   cursor: pointer;
-}
-
-.card-container {
-  display: flex;
-  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
@@ -29,89 +25,83 @@
   align-items: center;
   padding: 15px;
   text-align: center;
-
-  .avatar {
-    width: 280px; 
-    height: 180px; 
-    margin-bottom: 10px;
-    overflow: hidden; 
-    border-radius: 10px;
-  }
-
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .user-online-indicator {
-    width: 12px;
-    height: 12px;
-    background-color: #53f45a;
-    position: absolute;
-    bottom: 8px;
-    right: 6px;
-    border-radius: 50%;
-    z-index: 4;
-  }
-
-  .profile-details {
-    overflow-x: auto;
-    overflow-y: hidden;
-    h1 {
-      font-size: 18px;
-      font-weight: 500;
-      margin-bottom: 5px;
-    }
-
-    .profile-info {
-      p {
-        margin-bottom: 3px;
-        color: #6d6d6d;
-      }
-    }
-
-    .profile-role {
-      color: #6d6d6d;
-    }
-
-    button {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-  }
 }
 
+.avatar {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-details {
+  overflow-x: auto;
+  overflow-y: auto; 
+  max-height: 200px; /* if you remove this, the auto scroliing in the box will stop, basically box will increast */
+}
+
+
+h1 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.profile-info p {
+  margin-bottom: 3px;
+  color: #6d6d6d;
+}
+
+.profile-role {
+  color: #6d6d6d;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #dc3545; /* Reddish color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
 
 .search-container {
   margin-bottom: 20px;
   margin-top: 20px;
   margin-left: 9%;
-
-  input {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 250px;
-  }
-
-  button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
 }
 
+input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px;
+}
+
+button {
+  background-color: #e57373; /* Lighter red color */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #ef5350; /* Darker red on hover */
 }

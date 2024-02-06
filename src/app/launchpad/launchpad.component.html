@@ -1,15 +1,13 @@
-<!-- this is for search funcationality -->
 <div class="search-container">
   <input type="text" [(ngModel)]="searchTerm" placeholder="Search by name or region" />
   <button (click)="filterLaunchpads()">Search</button>
 </div>
 
 <!-- Display the filtered launchpads -->
-<div class="container">
-  <div class="card" *ngFor="let launchpad of filteredLaunchpads">
+<div class="launchpad-container">
+  <div class="launchpad-card" *ngFor="let launchpad of filteredLaunchpads">
     <div class="card-header">
       <div class="avatar">
-        <!-- check the image in api, its nested in object so use this method -->
         <img [src]="launchpad.images?.large?.[0] || 'default-image-url'" alt="launchpad-image" />
       </div>
       <div class="profile-details">
@@ -18,15 +16,11 @@
           <p><strong>ID:</strong> {{ launchpad.id }}</p>
           <p><strong>Region:</strong> {{ launchpad.region }}</p>
         </div>
-        <!-- change this later before the interview, give it a good style, also make the boxes short -->
         <div class="profile-role">Launches Attempted: {{ launchpad.launch_attempts }}</div>
         <div class="profile-role">Status: {{ launchpad.status }}</div>
         <div class="profile-role">
-          <!-- we are opening a dialogue box basically if the words in details are more than 100  -->
           Details:
-          <span *ngIf="launchpad.details.length <= 100">
-            {{ launchpad.details }}
-          </span>
+          <span *ngIf="launchpad.details.length <= 100">{{ launchpad.details }}</span>
           <span *ngIf="launchpad.details.length > 100 && !launchpad.showMore">
             {{ launchpad.details.slice(0, 100) }}
             <button (click)="launchpad.showMore = true">Read more</button>
@@ -41,4 +35,3 @@
     </div>
   </div>
 </div>
-  
