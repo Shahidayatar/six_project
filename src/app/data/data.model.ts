@@ -12,16 +12,3 @@ export interface Data {
   
 
 }
-
-// data which are available in the api 
-// id 
-//name 
-// timezone
-// details
-// launches
-// region
-// images
-// launch_attempts
-// launch_successes
-// full_name
-// region

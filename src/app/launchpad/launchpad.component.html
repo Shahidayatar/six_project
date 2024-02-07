@@ -3,9 +3,8 @@
   <button (click)="filterLaunchpads()">Search</button>
 </div>
 
-<!-- Display the filtered launchpads -->
 <div class="launchpad-container">
-  <div class="launchpad-card" *ngFor="let launchpad of filteredLaunchpads">
+  <div class="launchpad-card" *ngFor="let launchpad of pagedLaunchpads">
     <div class="card-header">
       <div class="avatar">
         <img [src]="launchpad.images?.large?.[0] || 'default-image-url'" alt="launchpad-image" />
@@ -35,3 +34,11 @@
     </div>
   </div>
 </div>
+
+<!-- Pagination, to go to next page -->
+<div class="pagination">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>{{ currentPage }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>
+<div class="extra-space"></div>

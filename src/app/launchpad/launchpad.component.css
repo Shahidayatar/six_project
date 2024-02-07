@@ -7,6 +7,7 @@
   background-color: #f0f0f0;
   overflow-x: auto;
   padding: 10px;
+  
 }
 
 .launchpad-card {
@@ -105,3 +106,34 @@ button {
 button:hover {
   background-color: #ef5350; /* Darker red on hover */
 }
+
+
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.pagination button {
+  background-color:  #e57373;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 0 10px; 
+}
+
+.pagination button:hover {
+  background-color: #ef5350; 
+}
+
+
+.extra-space {
+  height: 20px; /* Adjust the height as needed, for extra space after the two buttons*/
+}
+
